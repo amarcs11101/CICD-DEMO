@@ -34,7 +34,11 @@ public class OrderServiceApplication {
 		System.out.println("Hii its demo !!!!!!");
 		return "Spring is here!  CICD application by Abhishek Amar";
 	}
-    
+    @GetMapping("/demo1")
+	String demo() {
+		System.out.println("Hii its demo !!!!!!");
+		return "Spring is here!  CICD application by demo1";
+	}
     @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable("id")Integer id){
     	return new ResponseEntity<Object>(orderDao.addOrders(id),HttpStatus.OK);
