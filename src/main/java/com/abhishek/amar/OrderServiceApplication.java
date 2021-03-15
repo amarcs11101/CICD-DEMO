@@ -40,7 +40,7 @@ public class OrderServiceApplication {
     	return new ResponseEntity<Object>(orderDao.addOrders(id),HttpStatus.OK);
     }
     
-    @GetMapping("/details")
+    @GetMapping("/details1")
     public ResponseEntity<Object> getOrderDetails(){ 
     	return new ResponseEntity<Object>("demo app with changes to show cicd ",HttpStatus.OK);
     }
