@@ -41,13 +41,8 @@ public class OrderServiceApplication {
     }
     
     @GetMapping("/details")
-    public ResponseEntity<Object> getOrderDetails(){
-    	List<Order> list = new ArrayList<>();
-   	 list.add(new Order(1, "Abhishek", 1, 30000));
-   	 list.add(new Order(2, "Amar", 4, 2000));
-   	 list.add(new Order(3, "Sharath Sir", 1, 150000));
-   	 list.add(new Order(4, "Demo application", 1, 1799)); 
-    	return new ResponseEntity<Object>(list,HttpStatus.OK);
+    public ResponseEntity<Object> getOrderDetails(){ 
+    	return new ResponseEntity<Object>("demo app with changes to show cicd ",HttpStatus.OK);
     }
 
     public static void main(String[] args) {
