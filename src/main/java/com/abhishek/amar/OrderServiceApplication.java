@@ -38,12 +38,7 @@ public class OrderServiceApplication {
     @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable("id")Integer id){
     	return new ResponseEntity<Object>(orderDao.addOrders(id),HttpStatus.OK);
-    }
-    
-    @GetMapping("/details1")
-    public ResponseEntity<Object> getOrderDetails(){ 
-    	return new ResponseEntity<Object>("demo app with changes to show cicd ",HttpStatus.OK);
-    }
+    } 
 
     public static void main(String[] args) {
         SpringApplication.run(OrderServiceApplication.class, args);
