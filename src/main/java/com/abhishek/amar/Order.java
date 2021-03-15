@@ -1,4 +1,4 @@
-package com.javatechie.aws.cicd.example;
+package com.abhishek.amar;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

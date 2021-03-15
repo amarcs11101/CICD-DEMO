@@ -1,5 +1,6 @@
-package com.javatechie.aws.cicd.example;
+package com.abhishek.amar;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,6 +38,16 @@ public class OrderServiceApplication {
     @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable("id")Integer id){
     	return new ResponseEntity<Object>(orderDao.addOrders(id),HttpStatus.OK);
+    }
+    
+    @GetMapping("/details")
+    public ResponseEntity<Object> getOrderDetails(){
+    	List<Order> list = new ArrayList<>();
+   	 list.add(new Order(1, "Abhishek", 1, 30000));
+   	 list.add(new Order(2, "Amar", 4, 2000));
+   	 list.add(new Order(3, "Sharath Sir", 1, 150000));
+   	 list.add(new Order(4, "Demo application", 1, 1799)); 
+    	return new ResponseEntity<Object>(list,HttpStatus.OK);
     }
 
     public static void main(String[] args) {
